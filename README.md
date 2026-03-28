@@ -1,3 +1,14 @@
+---
+title: Coral Reef Bleaching Predictor
+emoji: 🪸
+colorFrom: green
+colorTo: blue
+sdk: gradio
+sdk_version: 5.0.0
+app_file: app.py
+pinned: false
+---
+
 # 🪸 Coral Reef Bleaching Risk Predictor
 
 A machine learning web application that predicts coral reef bleaching risk using four trained classification models. Built as part of an ML assignment at SLIIT.
