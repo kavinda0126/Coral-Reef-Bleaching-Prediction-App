@@ -1,0 +1,27 @@
+{
+  "algorithm": "lr_best",
+  "model_file": "lr_model.pkl",
+  "scaler_file": "lr_scaler.pkl",
+  "needs_scaling": true,
+  "features": [
+    "ClimSST",
+    "Temperature_Mean",
+    "Temperature_Minimum",
+    "Temperature_Maximum",
+    "SSTA",
+    "SSTA_DHW",
+    "TSA",
+    "TSA_DHW",
+    "Windspeed",
+    "SSTA_Frequency",
+    "SSTA_Frequency_Standard_Deviation",
+    "Turbidity",
+    "Cyclone_Frequency",
+    "Latitude_Degrees",
+    "Longitude_Degrees",
+    "Date_Year"
+  ],
+  "test_roc_auc": 0.7338,
+  "test_f1": 0.6835,
+  "test_accuracy": 0.6739
+}
