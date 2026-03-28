@@ -134,6 +134,7 @@ def run_prediction(ClimSST,Temperature_Mean,Temperature_Minimum,Temperature_Maxi
              fontsize=9,fontweight="bold")
     ax2.set_title("Consensus Gauge",color="white",fontweight="bold")
     plt.tight_layout(pad=1.5)
+    plt.close(fig)
     return txt, fig
 
 
@@ -195,6 +196,7 @@ def run_batch():
     ax.set_title("Batch Prediction — All Sites × All Models",
                  color="white",fontweight="bold",fontsize=12)
     plt.tight_layout()
+    plt.close(fig)
     return txt, fig
 
 
@@ -328,4 +330,4 @@ with gr.Blocks(
 """)
 
 if __name__ == "__main__":
-    app.launch(share=True)
+    app.launch(server_name="0.0.0.0")
