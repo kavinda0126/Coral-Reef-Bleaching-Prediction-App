@@ -1,0 +1,27 @@
+{
+  "algorithm": "Random Forest",
+  "model_file": "rf_model.pkl",
+  "scaler_file": null,
+  "needs_scaling": false,
+  "features": [
+    "ClimSST",
+    "Temperature_Mean",
+    "Temperature_Minimum",
+    "Temperature_Maximum",
+    "SSTA",
+    "SSTA_DHW",
+    "TSA",
+    "TSA_DHW",
+    "Windspeed",
+    "SSTA_Frequency",
+    "SSTA_Frequency_Standard_Deviation",
+    "Turbidity",
+    "Cyclone_Frequency",
+    "Latitude_Degrees",
+    "Longitude_Degrees",
+    "Date_Year"
+  ],
+  "test_roc_auc": 0.9704,
+  "test_f1": 0.908,
+  "test_accuracy": 0.9045
+}
