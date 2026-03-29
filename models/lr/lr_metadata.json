@@ -1,8 +1,8 @@
 {
-  "algorithm": "Logistic Regression (Enhanced)",
+  "algorithm": "Logistic Regression (Polynomial Pipeline)",
   "model_file": "lr_model.pkl",
-  "scaler_file": "lr_scaler.pkl",
-  "needs_scaling": true,
+  "scaler_file": null,
+  "needs_scaling": false,
   "features": [
     "ClimSST",
     "Temperature_Mean",
@@ -19,22 +19,16 @@
     "Cyclone_Frequency",
     "Latitude_Degrees",
     "Longitude_Degrees",
-    "Date_Year",
-    "thermal_stress_index",
-    "temp_above_30",
-    "sst_range",
-    "dhw_stress_level"
+    "Date_Year"
   ],
-  "enhancements": [
-    "feature_engineering",
-    "SMOTE",
-    "saga_L1L2",
-    "threshold_opt"
+  "model_type": "Pipeline",
+  "pipeline_steps": [
+    "StandardScaler",
+    "PolynomialFeatures(degree=2)",
+    "LogisticRegression"
   ],
-  "optimal_threshold": 0.2799999999999999,
-  "best_C": 0.1,
-  "best_penalty": "l1",
-  "test_roc_auc": 0.7339,
-  "test_f1": 0.6825,
-  "test_accuracy": 0.6738
+  "optimal_threshold": 0.45999999999999985,
+  "test_roc_auc": 0.8003,
+  "test_f1": 0.736,
+  "test_accuracy": 0.7423
 }
