@@ -1,5 +1,5 @@
 {
-  "algorithm": "lr_best",
+  "algorithm": "Logistic Regression (Enhanced)",
   "model_file": "lr_model.pkl",
   "scaler_file": "lr_scaler.pkl",
   "needs_scaling": true,
@@ -19,9 +19,22 @@
     "Cyclone_Frequency",
     "Latitude_Degrees",
     "Longitude_Degrees",
-    "Date_Year"
+    "Date_Year",
+    "thermal_stress_index",
+    "temp_above_30",
+    "sst_range",
+    "dhw_stress_level"
   ],
-  "test_roc_auc": 0.7338,
-  "test_f1": 0.6835,
-  "test_accuracy": 0.6739
+  "enhancements": [
+    "feature_engineering",
+    "SMOTE",
+    "saga_L1L2",
+    "threshold_opt"
+  ],
+  "optimal_threshold": 0.2799999999999999,
+  "best_C": 0.1,
+  "best_penalty": "l1",
+  "test_roc_auc": 0.7339,
+  "test_f1": 0.6825,
+  "test_accuracy": 0.6738
 }
