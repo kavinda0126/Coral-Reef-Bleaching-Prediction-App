@@ -3,6 +3,11 @@ Coral Reef Bleaching Prediction App
 Hugging Face Spaces / Local Gradio App
 Loads 4 models from models/ folder
 """
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
+import sklearn
+sklearn.set_config(enable_metadata_routing=False)
+
 import gradio as gr
 import joblib, json, os
 import numpy as np
