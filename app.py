@@ -243,7 +243,7 @@ with gr.Blocks(
     with gr.Tabs():
 
         # ── TAB 1: Single Prediction ─────────────────────────────────────────
-        with gr.TabItem("🔍 Single Prediction"):
+        with gr.Tab("🔍 Single Prediction"):
             with gr.Row():
                 with gr.Column(scale=1):
                     gr.Markdown("### Ocean Conditions")
@@ -273,7 +273,7 @@ with gr.Blocks(
                                outputs=[result_txt,result_chart])
 
         # ── TAB 2: Sample Sites ───────────────────────────────────────────────
-        with gr.TabItem("🗺️ Sample Reef Sites"):
+        with gr.Tab("🗺️ Sample Reef Sites"):
             gr.Markdown("### Select a pre-configured reef site to auto-fill sliders")
             site_dd  =gr.Dropdown(choices=list(SAMPLE_SITES.keys()),
                                    label="Reef Site",
@@ -298,7 +298,7 @@ with gr.Blocks(
             gr.Markdown("\n".join(rows))
 
         # ── TAB 3: Batch Prediction ───────────────────────────────────────────
-        with gr.TabItem("📋 Batch Prediction"):
+        with gr.Tab("📋 Batch Prediction"):
             gr.Markdown("### Run all 10 sample sites through all 4 models simultaneously")
             batch_btn  =gr.Button("▶ Run Batch Prediction",variant="primary",size="lg")
             batch_txt  =gr.Textbox(label="Batch Results",lines=20,
@@ -307,7 +307,7 @@ with gr.Blocks(
             batch_btn.click(fn=run_batch,inputs=[],outputs=[batch_txt,batch_chart])
 
         # ── TAB 4: Model Info ─────────────────────────────────────────────────
-        with gr.TabItem("ℹ️ Model Info"):
+        with gr.Tab("ℹ️ Model Info"):
             gr.Markdown("### Loaded Models & Performance")
             info_rows=["| Model | Features | Test Accuracy | F1 | ROC-AUC |",
                         "|---|---|---|---|---|"]
